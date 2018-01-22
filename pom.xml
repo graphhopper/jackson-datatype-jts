@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.bedatadriven</groupId>
+  <groupId>com.graphhopper</groupId>
   <artifactId>jackson-datatype-jts</artifactId>
-  <version>2.5-SNAPSHOT</version>
+  <version>0.10-2.5</version>
   <name>Jackson-datatype-jts</name>
   <description>Add-on module for Jackson (http://jackson.codehaus.org) to support JTS geometry types using
     the GeoJSON standard.</description>
@@ -38,7 +38,7 @@
 
   <distributionManagement>
     <repository>
-      <id>sonatype-ossrh</id>
+      <id>ossrh</id>
       <name>Sonatype OSSRH</name>
       <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
     </repository>
