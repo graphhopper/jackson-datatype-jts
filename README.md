@@ -24,6 +24,13 @@ To use the module in Maven-based projects, use following dependency:
 </dependency>    
 ```
 
+GraphHopper updates on branch `gh`:
+
+ * 0.10-2.5-2 new groupId `com.graphhopper.external` and introduced JTS 0.15.0
+ * 0.12-2.5-0 with the original jackson-databind dependency 2.4.2
+ * 0.12-2.5-1 with jackson-databind 2.9.6
+
+
 ### Gradle
 
 
