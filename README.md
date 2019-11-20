@@ -29,7 +29,7 @@ GraphHopper updates on branch `gh`:
  * 0.10-2.5-2 new groupId `com.graphhopper.external` and introduced JTS 0.15.0
  * 0.12-2.5-0 with the original jackson-databind dependency 2.4.2 and JTS 0.15.1
  * 0.12-2.5-1 with jackson-databind 2.9.6
- * 1.0-2.6    with jackson-databind 2.9.9 and JTS 0.16.0
+ * 1.0-2.7    with jackson-databind 2.9.9 and JTS 0.16.0
 
 ### Gradle
 
