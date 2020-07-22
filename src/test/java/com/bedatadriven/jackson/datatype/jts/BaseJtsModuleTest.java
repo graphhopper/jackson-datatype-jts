@@ -19,7 +19,7 @@ import static org.junit.Assert.assertThat;
 public abstract class BaseJtsModuleTest<T extends Geometry> {
     protected GeometryFactory gf = new GeometryFactory();
     private ObjectWriter writer;
-    private ObjectMapper mapper;
+    protected ObjectMapper mapper;
     private T geometry;
     private String geometryAsGeoJson;
 
