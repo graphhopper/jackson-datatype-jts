@@ -18,7 +18,7 @@ public class PointParser extends BaseParser implements GeometryParser<Point> {
     }
 
     public static Coordinate coordinateFromJson(JsonNode array) {
-        assert array.isArray() && (array.size() == 2 || array.size() == 3) : "expecting coordinate array with single point [ x, y, |z| ]";
+        assert array != null && array.isArray() && (array.size() == 2 || array.size() == 3) : "expecting coordinate array with single point [ x, y, |z| ]";
 
         if (array.size() == 2) {
             return new Coordinate(

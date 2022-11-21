@@ -18,18 +18,25 @@ To use the module in Maven-based projects, use following dependency:
 
 ```xml
 <dependency>
-  <groupId>com.bedatadriven</groupId>
+  <groupId>com.graphhopper.external</groupId>
   <artifactId>jackson-datatype-jts</artifactId>
-  <version>2.2</version>
+  <version>[latest]</version>
 </dependency>    
 ```
+
+GraphHopper updates on branch `gh`:
+
+ * 0.10-2.5-2 new groupId `com.graphhopper.external` and introduced JTS 1.15.0
+ * 0.12-2.5-0 with the original jackson-databind dependency 2.4.2 and JTS 1.15.1
+ * 0.12-2.5-1 with jackson-databind 2.9.6
+ * 1.0-2.7    with jackson-databind 2.9.9 and JTS 1.16.0
 
 ### Gradle
 
 
 ```gradle
 dependencies {
-    compile 'com.bedatadriven:jackson-datatype-jts:2.2'
+    compile 'com.graphhopper.external:jackson-datatype-jts:[latest]'
 }
 ```
 
