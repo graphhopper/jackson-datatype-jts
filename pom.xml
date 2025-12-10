@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.graphhopper.external</groupId>
   <artifactId>jackson-datatype-jts</artifactId>
-  <version>2.19.2</version>
+  <version>3.0.0</version>
   <name>Jackson-datatype-jts</name>
   <description>Add-on module for Jackson (http://jackson.codehaus.org) to support JTS geometry types using
     the GeoJSON standard.</description>
@@ -28,7 +28,7 @@
       </roles>
     </developer>
   </developers>
-  
+
   <scm>
     <connection>scm:git:git@github.com:bedatadriven/jackson-datatype-jts.git</connection>
     <url>scm:git:git@github.com:bedatadriven/jackson-datatype-jts.git</url>
@@ -52,9 +52,9 @@
 
   <dependencies>
     <dependency>
-      <groupId>com.fasterxml.jackson.core</groupId>
+      <groupId>tools.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
-      <version>2.19.2</version>
+      <version>3.0.3</version>
     </dependency>
     <dependency>
       <groupId>org.locationtech.jts</groupId>

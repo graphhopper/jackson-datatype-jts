@@ -3,8 +3,8 @@ package com.bedatadriven.jackson.datatype.jts;
 import com.bedatadriven.jackson.datatype.jts.parsers.*;
 import com.bedatadriven.jackson.datatype.jts.serialization.GeometryDeserializer;
 import com.bedatadriven.jackson.datatype.jts.serialization.GeometrySerializer;
-import com.fasterxml.jackson.core.Version;
-import com.fasterxml.jackson.databind.module.SimpleModule;
+import tools.jackson.core.Version;
+import tools.jackson.databind.module.SimpleModule;
 import org.locationtech.jts.geom.*;
 
 public class JtsModule extends SimpleModule {
@@ -14,7 +14,7 @@ public class JtsModule extends SimpleModule {
     }
     
     public JtsModule(GeometryFactory geometryFactory) {
-        super("JtsModule", new Version(1, 0, 0, null,"com.bedatadriven","jackson-datatype-jts"));
+        super("JtsModule", new Version(3, 0, 0, null,"com.bedatadriven","jackson-datatype-jts"));
 
         addSerializer(Geometry.class, new GeometrySerializer());
         GenericGeometryParser genericGeometryParser = new GenericGeometryParser(geometryFactory);

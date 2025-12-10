@@ -1,7 +1,8 @@
 package com.bedatadriven.jackson.datatype.jts.parsers;
 
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.JsonNode;
+import tools.jackson.core.JsonParser;
+import tools.jackson.databind.DatabindException;
+import tools.jackson.databind.JsonNode;
 import org.locationtech.jts.geom.Geometry;
 import org.locationtech.jts.geom.GeometryFactory;
 
@@ -15,11 +16,11 @@ import static com.bedatadriven.jackson.datatype.jts.GeoJson.*;
  */
 public class GenericGeometryParser extends BaseParser implements GeometryParser<Geometry> {
 
-    private Map<String, GeometryParser> parsers;
+    private final Map<String, GeometryParser<? extends Geometry>> parsers;
 
     public GenericGeometryParser(GeometryFactory geometryFactory) {
         super(geometryFactory);
-        parsers = new HashMap<String, GeometryParser>();
+        parsers = new HashMap<String, GeometryParser<? extends Geometry>>();
         parsers.put(POINT, new PointParser(geometryFactory));
         parsers.put(MULTI_POINT, new MultiPointParser(geometryFactory));
         parsers.put(LINE_STRING, new LineStringParser(geometryFactory));
@@ -30,14 +31,14 @@ public class GenericGeometryParser extends BaseParser implements GeometryParser<
     }
 
     @Override
-    public Geometry geometryFromJson(JsonNode node) throws JsonMappingException {
-        String typeName = node.get(TYPE).asText();
-        GeometryParser parser = parsers.get(typeName);
+    public Geometry geometryFromJson(JsonNode node, JsonParser jsonParser) throws DatabindException {
+        String typeName = node.get(TYPE).asString();
+        GeometryParser<? extends Geometry> parser = parsers.get(typeName);
         if (parser != null) {
-            return parser.geometryFromJson(node);
+            return parser.geometryFromJson(node, jsonParser);
         }
         else {
-            throw new JsonMappingException("Invalid geometry type: " + typeName);
+            throw DatabindException.from(jsonParser,"Invalid geometry type: " + typeName);
         }
     }
 }

@@ -1,7 +1,5 @@
 package com.bedatadriven.jackson.datatype.jts;
 
-import com.fasterxml.jackson.databind.deser.Deserializers;
-import com.fasterxml.jackson.databind.node.BaseJsonNode;
 import org.locationtech.jts.geom.*;
 
 /**

@@ -39,8 +39,7 @@ To use JTS geometry datatypes with Jackson, you will first need to register the 
 with all Jackson datatype modules):
 
 ```java
-ObjectMapper mapper = new ObjectMapper();
-mapper.registerModule(new JtsModule());
+ObjectMapper mapper = JsonMapper.builder().addModule(new JtsModule()).build();
 ```
 
 ### Reading and Writing Geometry types
