@@ -1,11 +1,9 @@
 package com.bedatadriven.jackson.datatype.jts;
 
 import org.locationtech.jts.geom.Coordinate;
-import org.locationtech.jts.geom.Geometry;
 import org.locationtech.jts.geom.LinearRing;
 import org.locationtech.jts.geom.Polygon;
 
-import static org.junit.Assert.assertThat;
 
 /**
  * Created by mihaildoronin on 11/11/15.

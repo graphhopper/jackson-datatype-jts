@@ -1,7 +1,8 @@
 package com.bedatadriven.jackson.datatype.jts.parsers;
 
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.JsonNode;
+import tools.jackson.core.JsonParser;
+import tools.jackson.databind.DatabindException;
+import tools.jackson.databind.JsonNode;
 import org.locationtech.jts.geom.Geometry;
 
 /**
@@ -9,6 +10,6 @@ import org.locationtech.jts.geom.Geometry;
  */
 public interface GeometryParser<T extends Geometry> {
 
-    T geometryFromJson(JsonNode node) throws JsonMappingException;
+    T geometryFromJson(JsonNode node, JsonParser jsonParser) throws DatabindException;
 
 }

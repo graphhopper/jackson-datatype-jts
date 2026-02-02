@@ -1,7 +1,8 @@
 package com.bedatadriven.jackson.datatype.jts.parsers;
 
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.JsonNode;
+import tools.jackson.core.JsonParser;
+import tools.jackson.databind.DatabindException;
+import tools.jackson.databind.JsonNode;
 import org.locationtech.jts.geom.Coordinate;
 import org.locationtech.jts.geom.GeometryFactory;
 import org.locationtech.jts.geom.Point;
@@ -46,7 +47,7 @@ public class PointParser extends BaseParser implements GeometryParser<Point> {
     }
 
     @Override
-    public Point geometryFromJson(JsonNode node) throws JsonMappingException {
+    public Point geometryFromJson(JsonNode node, JsonParser jsonParser) throws DatabindException {
         return pointFromJson(node);
     }
 }
