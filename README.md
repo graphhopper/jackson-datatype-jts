@@ -22,6 +22,7 @@ To use the module in Maven-based projects, use following dependency:
 
 GraphHopper updates compared to [upstream](https://github.com/bedatadriven/jackson-datatype-jts):
 
+ * 2.21.0     uses JTS 1.20.0
  * 2.19.2     uses JTS 1.20.0
  * 2.14       uses JTS 1.19.0, requires Java 8
  * 0.12-2.5-1 uses JTS 1.15.1

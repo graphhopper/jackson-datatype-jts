@@ -28,7 +28,7 @@
       </roles>
     </developer>
   </developers>
-
+  
   <scm>
     <connection>scm:git:git@github.com:bedatadriven/jackson-datatype-jts.git</connection>
     <url>scm:git:git@github.com:bedatadriven/jackson-datatype-jts.git</url>
